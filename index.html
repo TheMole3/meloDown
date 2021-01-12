@@ -21,8 +21,8 @@
               brd: "Bröd"
             } 
             var site = "Sidan"
-            const urlParams = new URLSearchParams(window.location.search);
-            const site = urlParams.get('s');
+            var urlParams = new URLSearchParams(window.location.search);
+            site = urlParams.get('s');
             
             document.getElementById("title").innerHTML = siteList[site] + " är tillfälligt nere"
             window.title = siteList[site] + " är nere!"
