@@ -22,9 +22,9 @@
             } 
             var site = "Sidan"
             var urlParams = new URLSearchParams(window.location.search);
-            if(urlParams.get('s')) site = urlParams.get('s');
+            if(siteList[urlParams.get('s')]) site = siteList[urlParams.get('s')];
             
-            document.getElementById("title").innerHTML = siteList[site] + " är tillfälligt nere"
+            document.getElementById("title").innerHTML = site + " är tillfälligt nere"
             window.title = siteList[site] + " är nere!"
         </script>
       </body>
