@@ -1,7 +1,7 @@
     <!DOCTYPE html>
     <html lang="en">
       <head>
-        <title>${site}</title>
+        <title>Sidan är nere!</title>
         <meta name="description" content="is down">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,12 @@
               mel:"Melo.se",
               brd: "Bröd"
             } 
+            var site = "Sidan"
             const urlParams = new URLSearchParams(window.location.search);
             const site = urlParams.get('s');
             
-            document.getElementById("title").innerHTML = site + " är tillfälligt nere"
+            document.getElementById("title").innerHTML = siteList[site] + " är tillfälligt nere"
+            window.title = siteList[site] + " är nere!"
         </script>
       </body>
     </html>
