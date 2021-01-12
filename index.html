@@ -9,10 +9,21 @@
       </head>
       <body style="font-family: 'Benton Sans', 'Helvetica Neue', helvetica, arial, sans-serif;margin: 2em;">
         <header>
-          <h1 style=" color: #373fff; font-weight: bold;">
+          <h1 id="title" style=" color: #373fff; font-weight: bold;">
             Sidan är tillfälligt nere
           </h1>
           <p>Kontakta <a href="mailto:kontakt@melo.se">kontakt@melo.se</a> om du har frågor</p>
         </header>
+        <script>
+            const siteList = {
+              tub:"Tubfestivalen",
+              mel:"Melo.se",
+              brd: "Bröd"
+            } 
+            const urlParams = new URLSearchParams(window.location.search);
+            const site = urlParams.get('s');
+            
+            document.getElementById("title").innerHTML = site + " är tillfälligt nere"
+        </script>
       </body>
     </html>
